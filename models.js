@@ -13,6 +13,16 @@ const mongoose = require('mongoose');
  */
 const BearSchema = new mongoose.Schema({
   // TODO: write your schema here
+  species: {
+    type: 'string'
+  },
+  latinName: {
+    type: 'string'
+  },
+  createdAt: {
+    type: Date,
+    default: Date.now
+  }
 });
 
 module.exports = mongoose.model('Bears', BearSchema);
